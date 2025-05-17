@@ -186,8 +186,10 @@ export function HeroSection() {
                 CV Studio uses advanced AI to analyze job descriptions and automatically tailor your resume to match exactly what employers are looking for.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="group px-20 py-8 text-xl font-bold min-w-[240px]" onClick={triggerConfetti}>
-                  Create Your Resume <ArrowRight className="ml-2 h-6 w-6 group-hover:translate-x-1 transition-transform" />
+                <Button size="lg" className="group" onClick={triggerConfetti} asChild>
+                  <a href="https://app.cvstudio.ai" target="_blank" rel="noopener noreferrer">
+                    Create Your Resume <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </a>
                 </Button>
                 {/* <Button size="lg" variant="outline">
                   See Examples

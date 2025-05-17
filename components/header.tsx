@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import {
-  FileText,
   Menu,
   X,
   MoonStar,
@@ -45,9 +45,24 @@ export function Header() {
       )}
     >
       <div className="container mx-auto px-4 flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-2">
-          <FileText className="h-8 w-8 text-primary" />
-          <span className="font-bold text-xl">CV Studio</span>
+        <Link href="/" className="flex items-center">
+          {theme === "dark" ? (
+            <Image 
+              src="/images/logo-dark.png" 
+              alt="CV Studio Logo" 
+              width={150} 
+              height={40} 
+              priority
+            />
+          ) : (
+            <Image 
+              src="/images/logo-light.png" 
+              alt="CV Studio Logo" 
+              width={150} 
+              height={40} 
+              priority
+            />
+          )}
         </Link>
 
         {/* Desktop Navigation */}
@@ -72,8 +87,12 @@ export function Header() {
               <MoonStar className="h-5 w-5" />
             )}
           </Button>
-          <Button variant="outline">Sign In</Button>
-          <Button>Get Started</Button>
+          <Button variant="outline" asChild>
+            <a href="https://app.cvstudio.ai/sign-in" target="_blank" rel="noopener noreferrer">Sign In</a>
+          </Button>
+          <Button asChild>
+            <a href="https://app.cvstudio.ai" target="_blank" rel="noopener noreferrer">Get Started</a>
+          </Button>
         </div>
 
         {/* Mobile Navigation */}
@@ -145,8 +164,12 @@ export function Header() {
               FAQ
             </Link>
             <div className="flex flex-col gap-2 pt-4 border-t">
-              <Button variant="outline" className="w-full">Sign In</Button>
-              <Button className="w-full">Get Started</Button>
+              <Button variant="outline" className="w-full" asChild>
+                <a href="https://app.cvstudio.ai/sign-in" target="_blank" rel="noopener noreferrer">Sign In</a>
+              </Button>
+              <Button className="w-full" asChild>
+                <a href="https://app.cvstudio.ai" target="_blank" rel="noopener noreferrer">Get Started</a>
+              </Button>
             </div>
           </nav>
         </div>

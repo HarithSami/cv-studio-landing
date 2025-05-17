@@ -103,8 +103,10 @@ export function HowItWorksSection() {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <Button size="lg" className="group" onClick={triggerConfetti}>
-              Try CV Studio Now <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            <Button size="lg" className="group" onClick={triggerConfetti} asChild>
+              <a href="https://app.cvstudio.ai" target="_blank" rel="noopener noreferrer">
+                Try CV Studio Now <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </a>
             </Button>
           </motion.div>
         </div>

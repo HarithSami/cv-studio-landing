@@ -200,8 +200,10 @@ export function CtaSection() {
                       </div>
                     </div>
                     
-                    <Button className="w-full" size="lg">
-                      Purchase Credits
+                    <Button className="w-full" size="lg" asChild>
+                      <a href="https://app.cvstudio.ai/sign-in" target="_blank" rel="noopener noreferrer">
+                        Purchase Credits
+                      </a>
                     </Button>
                   </div>
                 </TabsContent>
@@ -250,7 +252,9 @@ export function CtaSection() {
                     </div>
                     
                     <Button className="w-full" size="lg" onClick={triggerConfettiFirework}>
-                      Start 7-Day Free Trial
+                    <a href="https://app.cvstudio.ai/sign-in" target="_blank" rel="noopener noreferrer">
+                    Start 7-Day Free Trial
+                    </a>
                     </Button>
                     
                     <div className="text-xs text-center text-muted-foreground">
@@ -307,8 +311,10 @@ export function CtaSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  <Button size="lg" className="group" onClick={triggerConfettiSchoolPride}>
-                    Get Started Now <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  <Button size="lg" className="group" onClick={triggerConfettiSchoolPride} asChild>
+                    <a href="https://app.cvstudio.ai" target="_blank" rel="noopener noreferrer">
+                      Get Started Now <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                    </a>
                   </Button>
                 </motion.div>
               </div>
