@@ -2,7 +2,7 @@
 
 import { motion } from "@/components/motion-wrapper";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Sparkles, Zap, Target, Shield, BarChart, Clock } from "lucide-react";
+import { Sparkles, Zap, Target, Shield, BarChart, Clock, FileText } from "lucide-react";
 
 const features = [
   {
@@ -29,6 +29,11 @@ const features = [
     icon: <BarChart className="h-10 w-10 text-rose-500" />,
     title: "Match Scoring",
     description: "See your application strength with a real-time match score between your resume and the job."
+  },
+  {
+    icon: <FileText className="h-10 w-10 text-rose-500" />,
+    title: "Various Templates",
+    description: "Choose from dozens of ATS-friendly, professionally designed resume templates."
   }
 ];
 
