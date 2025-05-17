@@ -50,7 +50,7 @@ export const motion = {
   }: MotionProps & React.HTMLAttributes<HTMLDivElement>) {
     const ref = useRef<HTMLDivElement>(null);
     const [isInView, setIsInView] = useState(false);
-    const [style, setStyle] = useState(initial || {});
+    const [style, setStyle] = useState<{ opacity?: number; y?: number; x?: number; scale?: number; transition?: string }>(initial || {});
 
     useEffect(() => {
       if (!whileInView) return;
@@ -155,9 +155,8 @@ export const motion = {
         viewport={viewport}
         transition={transition}
         className={className}
-        {...props}
       >
-        <h2 className={cn("", className)}>{children}</h2>
+        <h2 className={cn("", className)} {...props}>{children}</h2>
       </Component>
     );
   },
@@ -181,9 +180,8 @@ export const motion = {
         viewport={viewport}
         transition={transition}
         className={className}
-        {...props}
       >
-        <p className={cn("", className)}>{children}</p>
+        <p className={cn("", className)} {...props}>{children}</p>
       </Component>
     );
   },
@@ -207,9 +205,8 @@ export const motion = {
         viewport={viewport}
         transition={transition}
         className={className}
-        {...props}
       >
-        <li className={cn("", className)}>{children}</li>
+        <li className={cn("", className)} {...props}>{children}</li>
       </Component>
     );
   },
