@@ -179,23 +179,28 @@ export function HeroSection() {
               transition={{ duration: 0.5 }}
               className="max-w-xl"
             >
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold leading-tight">
                 Get More Interviews with AI-Tailored Resumes
               </h1>
               <p className="mt-6 text-lg md:text-xl text-muted-foreground">
                 CV Studio uses advanced AI to analyze job descriptions and automatically tailor your resume to match exactly what employers are looking for.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="group" onClick={triggerConfetti} asChild>
-                  <a href="https://app.cvstudio.ai" target="_blank" rel="noopener noreferrer">
-                    Create Your Resume <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                  </a>
-                </Button>
-                {/* <Button size="lg" variant="outline">
-                  See Examples
-                </Button> */}
-              </div>
-              
+              <Button
+                    size="lg"
+                    className="group"
+                    onClick={() => {
+                      triggerConfetti(); // your animation function
+                      setTimeout(() => {
+                        window.location.href = "https://app.cvstudio.ai";
+                      }, 1000); // delay in milliseconds (adjust as needed)
+                    }}
+                  >
+                    Create Your Resume
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+
+              </div>           
               <div className="mt-12">
                 <p className="text-sm text-muted-foreground mb-4">Trusted by professionals from leading companies</p>
                 <div className="grid grid-cols-3 md:grid-cols-5 gap-6 opacity-70">

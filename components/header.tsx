@@ -88,10 +88,10 @@ export function Header() {
             )}
           </Button>
           <Button variant="outline" asChild>
-            <a href="https://app.cvstudio.ai/sign-in" target="_blank" rel="noopener noreferrer">Sign In</a>
-          </Button>
-          <Button asChild>
-            <a href="https://app.cvstudio.ai" target="_blank" rel="noopener noreferrer">Get Started</a>
+                <a href="https://app.cvstudio.ai/sign-in">Sign In</a>
+              </Button>
+              <Button asChild>
+            <a href="https://app.cvstudio.ai">Get Started</a>
           </Button>
         </div>
 

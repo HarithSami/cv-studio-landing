@@ -311,11 +311,20 @@ export function CtaSection() {
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  <Button size="lg" className="group" onClick={triggerConfettiSchoolPride} asChild>
-                    <a href="https://app.cvstudio.ai" target="_blank" rel="noopener noreferrer">
-                      Get Started Now <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </a>
-                  </Button>
+              <Button
+                size="lg"
+                className="group"
+                onClick={() => {
+                  triggerConfettiSchoolPride(); // your animation function
+                  setTimeout(() => {
+                    window.location.href = "https://app.cvstudio.ai";
+                  }, 1000); // delay in milliseconds (1000ms = 1 second)
+                }}
+              >
+                Get Started Now
+                <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+              </Button>
+
                 </motion.div>
               </div>
               

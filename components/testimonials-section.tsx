@@ -8,21 +8,21 @@ import { StarIcon } from "lucide-react";
 const testimonials = [
   {
     quote: "CV Studio helped me land interviews at 3 top tech companies. The AI perfectly matched my skills to each job description.",
-    author: "Alex Johnson",
-    position: "Software Engineer",
-    avatar: "AJ",
+    author: "Abdulsalam Ibrahim",
+    position: "Control Engineer",
+    avatar: "AI",
   },
   {
     quote: "I was struggling to get callbacks until I used CV Studio. Now my resume gets through ATS systems and into human hands!",
-    author: "Maria Rodriguez",
-    position: "Marketing Specialist",
-    avatar: "MR",
+    author: "Mustafa AlJaafari",
+    position: "Electronics Engineer",
+    avatar: "MA",
   },
   {
     quote: "As a career changer, I needed to highlight transferable skills. CV Studio did this automatically for each job I applied to.",
-    author: "David Chen",
-    position: "Data Analyst",
-    avatar: "DC",
+    author: "Abdullah Omar",
+    position: "Electronics Engineer",
+    avatar: "AO",
   },
 ];
 
