@@ -12,6 +12,7 @@ const CompanyLogosSection = dynamic(() => import('@/components/company-logos-sec
 const FaqSection = dynamic(() => import('@/components/faq-section').then(mod => ({ default: mod.FaqSection })))
 const CtaSection = dynamic(() => import('@/components/cta-section').then(mod => ({ default: mod.CtaSection })))
 
+
 export default function Home() {
   return (
     <main className="relative min-h-screen">
